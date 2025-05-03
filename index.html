@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventix Budgeter - Professional Event Planning</title>
+    <!-- Include Animate.css for smooth animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Include Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Link to custom CSS for styling -->
+    <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container header-container">
+            <!-- Logo of the website -->
+            <a href="#" class="logo">Eventix<span>Budgeter</span></a>
+            <!-- Hamburger menu for mobile view -->
+            <div class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+            <!-- Navigation Menu -->
+            <nav id="nav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#calculator">Budget Calculator</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-content">
+            <h1 class="animate__animated animate__fadeInDown">Creating Unforgettable Events</h1>
+            <p class="animate__animated animate__fadeInUp">From intimate gatherings to grand celebrations, we bring your vision to life with precision and creativity.</p>
+            <a href="#calculator" class="btn animate__animated animate__fadeInUp">Estimate Your Budget</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Services</h2>
+            </div>
+            <div class="services-grid">
+                <!-- Wedding Service -->
+                <div class="service-card animate-on-scroll">
+                    <div class="service-img">
+                        <img src="./images/service1.avif" alt="Wedding Planning">
+                    </div>
+                    <div class="service-content">
+                        <h3>Weddings</h3>
+                        <p>From venue selection to floral arrangements, we handle every detail to create your perfect day.</p>
+                    </div>
+                </div>
+                <!-- Corporate Event Service -->
+                <div class="service-card animate-on-scroll">
+                    <div class="service-img">
+                        <img src="./images/service2.avif" alt="Corporate Events">
+                    </div>
+                    <div class="service-content">
+                        <h3>Corporate Events</h3>
+                        <p>Professional event planning for conferences, product launches, and corporate gatherings.</p>
+                    </div>
+                </div>
+                <!-- Birthday Party Service -->
+                <div class="service-card animate-on-scroll">
+                    <div class="service-img">
+                        <img src="./images/service3.avif" alt="Birthday Parties">
+                    </div>
+                    <div class="service-content">
+                        <h3>Birthday Parties</h3>
+                        <p>Celebrate your special day with unique themes and unforgettable experiences.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Budget Calculator Section -->
+    <section class="calculator" id="calculator">
+        <div class="container">
+            <div class="section-title">
+                <h2>Event Budget Calculator</h2>
+            </div>
+            <div class="calculator-container animate-on-scroll">
+                <form id="budget-calculator">
+                    <!-- Event Type Selection -->
+                    <div class="form-group">
+                        <label for="event-type">Event Type</label>
+                        <select id="event-type" required>
+                            <option value="">Select Event Type</option>
+                            <option value="wedding">Wedding</option>
+                            <option value="corporate">Corporate Event</option>
+                            <option value="birthday">Birthday Party</option>
+                            <option value="social">Social Gathering</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <!-- Guests and Duration -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="guests">Number of Guests</label>
+                            <input type="number" id="guests" min="10" max="1000" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="duration">Event Duration (hours)</label>
+                            <input type="number" id="duration" min="1" max="24" required>
+                        </div>
+                    </div>
+                    <!-- Venue Type Selection -->
+                    <div class="form-group">
+                        <label for="venue-type">Venue Type</label>
+                        <select id="venue-type" required>
+                            <option value="">Select Venue Type</option>
+                            <option value="indoor">Indoor</option>
+                            <option value="outdoor">Outdoor</option>
+                            <option value="luxury">Luxury Venue</option>
+                            <option value="destination">Destination Venue</option>
+                        </select>
+                    </div>
+                    <!-- Catering Level Selection -->
+                    <div class="form-group">
+                        <label for="catering">Catering Level</label>
+                        <select id="catering" required>
+                            <option value="">Select Catering Level</option>
+                            <option value="basic">Basic</option>
+                            <option value="standard">Standard</option>
+                            <option value="premium">Premium</option>
+                            <option value="luxury">Luxury</option>
+                        </select>
+                    </div>
+                    <!-- Entertainment Options -->
+                    <div class="form-group">
+                        <label for="entertainment">Entertainment</label>
+                        <select id="entertainment" required>
+                            <option value="">Select Entertainment</option>
+                            <option value="none">None</option>
+                            <option value="dj">DJ</option>
+                            <option value="band">Live Band</option>
+                            <option value="performers">Performers</option>
+                        </select>
+                    </div>
+                    <!-- Submit Button -->
+                    <button type="submit" class="btn">Calculate Budget</button>
+                </form>
+                <div class="result" id="result">
+                    <h3>Estimated Budget</h3>
+                    <p class="result-value" id="result-value">$0</p>
+                    <p>This is an estimate. Contact us for a detailed quote.</p>
+                </div>
+            </div>
+        </div>
+       
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+            </div>
+            <div class="contact-container">
+                <!-- Contact Information -->
+                <div class="contact-info animate-on-scroll">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Location</h3>
+                            <p>123 Event Street, Suite 456<br>New York, NY 10001</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Phone</h3>
+                            <p>+61 423 123-467</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Email</h3>
+                            <p>info@eventixbudgetor.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Hours</h3>
+                            <p>Monday - Friday: 9am - 6pm<br>Saturday: 10am - 4pm<br>Sunday: Closed</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Contact Form -->
+                <div class="contact-form animate-on-scroll">
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <a href="#" class="logo">Eventix<span>Budgeter</span></a>
+                <p>Creating memorable experiences through exceptional event planning.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                </div>
+                <div class="copyright">
+                    <p>&copy; 2025 Eventix Budgeter. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Include EmailJS SDK -->
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+    <!-- Link to custom JavaScript -->
+    <script src="./script.js"></script>
+</body>
+</html>
